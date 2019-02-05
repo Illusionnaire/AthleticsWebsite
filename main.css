@@ -24,3 +24,20 @@ Stevens Colors:
     Stevens Gray: #afafaf (176,176,176)
     
 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("TemplatePage.png");
+}
+
+.body-container {
+    margin: 125px auto;
+    width: 900px;
+    height: 90%;
+}
