@@ -34,7 +34,7 @@ Federal Work Study Information Link: https://www.stevens.edu/admissions/tuition-
 }
 
 body {
-    width: 80%;
+    width:75%;
     height: 100%;
     margin:auto;
 }
@@ -64,7 +64,8 @@ h2 {
 
 p {
     padding: 5px 0px;
-    font: 14px/20px arial, sans-serif;
+    font-family: Lato,sans-serif;
+    font-size: 1em;
     color: rgb(0,0,0);
 }
 
@@ -101,12 +102,20 @@ a:hover .button {
 }
 
 #main-image {
-    background-color: #5a1620;
-    width: 45%;
-    max-width: 400px;
+    background: url(test-image.jpg);
+    background-size: cover;
+    background-position: center;
+    min-width: 550px;
+    height: 400px;
+    width: 60%;
     display:inline-block;
     margin:auto;
     transition: opacity 0.5s ease;
+}
+
+.position-image {
+    grid-area: image2;
+    height: 300px;
 }
 
 #main-image:hover {
@@ -123,27 +132,25 @@ a:hover .button {
 .position-container{
     display: grid;
     padding: 10px;
-    width: 80%;
+    width: 100%;
     min-width: 300px;
     margin:auto;
+    justify-content: center;
+    align-content: center;
 }
 
 .position-container:nth-child(even) {
     text-align:left;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 5px 1fr;
+    grid-template-columns: 1fr 2fr 1.5fr;
     grid-template-areas:
-    "header header"
-    "image body";
+    "image image2 body";
 }
 
 .position-container:nth-child(odd) {
     text-align:right;
-    grid-template-columns: 1fr 300px;
-    grid-template-rows: 5px 1fr;
+    grid-template-columns: 1.5fr 2fr 1fr;
     grid-template-areas:
-    "header header"
-    "body image";
+    "body image2 image";
 }
 
 
@@ -159,11 +166,7 @@ a:hover .button {
 .left-image h1 {
     display: table-cell;
     vertical-align: middle;
-}
-
-.position-header {
-    grid-area: header;
-    background-color:#a32638;
+    padding: 20px;
 }
 
 .position-information {
@@ -171,11 +174,42 @@ a:hover .button {
     background-color: #E2E2E2;
 }
 
-.position-container:nth-child(odd) .position-information {
-    padding: 10px 40px 10px 10px;
-}
-.position-container:nth-child(even) .position-information {
-    padding: 10px 10px 10px 40px;
+.position-container:nth-child(odd) .position-information{
+    margin: 20px 10px 20px 0px;
+    border-right: 5px solid #a32638;
 }
 
-    
+.position-container:nth-child(even) .position-information{
+    margin: 20px 0px 20px 10px;
+    border-left: 5px solid #a32638;
+}
+
+.position-container .position-information {
+    padding: 10px;
+}
+
+#contact-container {
+    padding: 20px 0px;
+    margin:auto;
+    width: 80%;
+    font-family: Lato,sans-serif;
+    font-size: 1em;
+}
+
+#contact-container table caption {
+    color: #a32638;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+#contact-container table {
+    margin: auto;
+}
+
+#contact-container table tr:nth-child(odd) {
+    background-color:#E2E2E2;
+}
+
+#contact-container table tr td {
+    padding: 2px 15px;
+}
