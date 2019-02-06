@@ -47,6 +47,13 @@ h1 {
     line-height: 33px; 
 }
 
+h2 {
+    text-transform: uppercase;
+    font-family: 'BebasNeueRegular';
+    font-size: 30px;
+    font-weight: normal;
+}
+
 .header-container {
     color: #a32638;
     text-align:center;
@@ -89,14 +96,14 @@ a:hover .button {
 }
 
 .image-container {
-    height: 350px;
     padding: 20px;
     text-align:center;
 }
 
 #main-image {
     background-color: #5a1620;
-    height: 100%;
+    width: 45%;
+    max-width: 400px;
     display:inline-block;
     margin:auto;
     transition: opacity 0.5s ease;
@@ -111,6 +118,64 @@ a:hover .button {
 }
 #applynow {
     margin-left: 50px;
+}
+
+.position-container{
+    display: grid;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    margin:auto;
+}
+
+.position-container:nth-child(even) {
+    text-align:left;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 5px 1fr;
+    grid-template-areas:
+    "header header"
+    "image body";
+}
+
+.position-container:nth-child(odd) {
+    text-align:right;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 5px 1fr;
+    grid-template-areas:
+    "header header"
+    "body image";
+}
+
+
+.position-container .left-image{
+    display: table;
+    color: #a32638;
+    text-align:center;
+    grid-area: image;
+    width:100%;
+    height:100%;
+}
+
+.left-image h1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.position-header {
+    grid-area: header;
+    background-color:#a32638;
+}
+
+.position-information {
+    grid-area: body;
+    background-color: #E2E2E2;
+}
+
+.position-container:nth-child(odd) .position-information {
+    padding: 10px 40px 10px 10px;
+}
+.position-container:nth-child(even) .position-information {
+    padding: 10px 10px 10px 40px;
 }
 
     
