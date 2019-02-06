@@ -23,6 +23,9 @@ Stevens Colors:
     Darker Red: #5a1620 (90,22,32)
     Stevens Gray: #afafaf (176,176,176)
     
+Workday Link: https://stevens.wd5.myworkdayjobs.com/en-US/External/job/Hoboken-NJ---Main-Campus/FWS-Athletics-Event-Staff_RQ21677
+Federal Work Study Information Link: https://www.stevens.edu/admissions/tuition-financial-aid/undergraduate-scholarships-aid/federal-programs/work-study
+
 */
 
 * {
@@ -31,13 +34,83 @@ Stevens Colors:
 }
 
 body {
-    width: 100%;
+    width: 80%;
     height: 100%;
-    background-image: url("TemplatePage.png");
+    margin:auto;
 }
 
-.body-container {
-    margin: 125px auto;
-    width: 900px;
-    height: 90%;
+h1 {
+    text-transform: uppercase;
+    font-family: 'BebasNeueRegular';
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 33px; 
 }
+
+.header-container {
+    color: #a32638;
+    text-align:center;
+    padding: 20px 10px 30px;
+    width: 50%;
+    margin: auto;
+}
+
+p {
+    padding: 5px 0px;
+    font: 14px/20px arial, sans-serif;
+    color: rgb(0,0,0);
+}
+
+.center-text {
+    text-align:center;
+}
+
+.button {
+    background-color:#a32638;
+    padding: 10px 50px;
+    color: #fff;
+    border:none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.button-container {
+    padding: 0px;
+}
+
+a:hover .button {
+    background-color: #5a1620;
+  }
+
+.important-paragraph {
+    color: #5a1620;
+    text-decoration: underline;
+}
+
+.image-container {
+    height: 350px;
+    padding: 20px;
+    text-align:center;
+}
+
+#main-image {
+    background-color: #5a1620;
+    height: 100%;
+    display:inline-block;
+    margin:auto;
+    transition: opacity 0.5s ease;
+}
+
+#main-image:hover {
+    opacity:0.9;
+}
+
+#learnmore {
+    margin-right: 50px;
+}
+#applynow {
+    margin-left: 50px;
+}
+
+    
