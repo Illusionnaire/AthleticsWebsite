@@ -89,6 +89,7 @@ p {
 
 a:hover .button {
     background-color: #5a1620;
+    cursor: pointer;
   }
 
 .important-paragraph {
@@ -116,10 +117,6 @@ a:hover .button {
 .position-image {
     grid-area: image2;
     height: 300px;
-}
-
-#main-image:hover {
-    opacity:0.9;
 }
 
 #learnmore {
