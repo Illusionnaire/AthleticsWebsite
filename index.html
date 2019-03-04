@@ -3,7 +3,258 @@
 <head>
     <title>Stevens Athletics: Federal Work Study</title>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebasneueregular" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+    /*
+CSS Page Standard for Athletics Website:
+
+Section Headers:
+    text-transform: uppercase;
+    font-family: 'BebasNeueRegular';
+    font-size: 33px;
+    font-weight: normal;
+    line-height: 33px;
+    color: black;
+
+Paragraph: 
+    font: 14px/20px arial, sans-serif;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    color: rgb(0,0,0);
+
+Links (a):
+    color: rgb(123,20,33);
+    font-weight: bold;
+
+Stevens Colors: 
+    Red: #a32638 (163,38,56)
+    Darker Red: #5a1620 (90,22,32)
+    Stevens Gray: #afafaf (176,176,176)
+    
+Workday Link: https://stevens.wd5.myworkdayjobs.com/en-US/External/job/Hoboken-NJ---Main-Campus/FWS-Athletics-Event-Staff_RQ21677
+Federal Work Study Information Link: https://www.stevens.edu/admissions/tuition-financial-aid/undergraduate-scholarships-aid/federal-programs/work-study
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width:75%;
+    height: 100%;
+    margin:auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'BebasNeueRegular';
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 33px; 
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'BebasNeueRegular';
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.header-container {
+    color: #a32638;
+    text-align:center;
+    padding: 20px 10px 30px;
+    width: 50%;
+    margin: auto;
+}
+
+p {
+    padding: 5px 0px;
+    font-family: Lato,sans-serif;
+    font-size: 1em;
+    color: rgb(0,0,0);
+}
+
+.center-text {
+    text-align:center;
+}
+
+.button {
+    background-color:#a32638;
+    padding: 10px 50px;
+    color: #fff;
+    border:none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.button-container {
+    padding: 0px;
+}
+
+#learnmore {
+    margin-right: 50px;
+    text-decoration:none;
+}
+
+#applynow {
+    margin-left: 50px;
+    text-decoration:none;
+}
+
+.button:hover {
+    background-color: #5a1620;
+    cursor: pointer;
+  }
+
+.important-paragraph {
+    color: #5a1620;
+    text-decoration: underline;
+}
+
+.image-container {
+    padding: 20px;
+    text-align:center;
+}
+
+#main-image {
+    background: url(test-image.jpg);
+    background-size: cover;
+    background-position: center;
+    min-width: 550px;
+    height: 400px;
+    width: 60%;
+    display:inline-block;
+    margin:auto;
+    transition: opacity 0.5s ease;
+}
+
+.position-image {
+    grid-area: image2;
+    height: 300px;
+}
+
+.position-container{
+    display: grid;
+    padding: 10px;
+    width: 100%;
+    min-width: 300px;
+    margin:auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.position-container:nth-child(even) {
+    text-align:left;
+    grid-template-columns: 1fr 2fr 1.5fr;
+    grid-template-areas:
+    "image image2 body";
+}
+
+.position-container:nth-child(odd) {
+    text-align:right;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-areas:
+    "body image2 image";
+}
+
+
+.position-container .left-image{
+    display: table;
+    color: #a32638;
+    text-align:center;
+    grid-area: image;
+    width:100%;
+    height:100%;
+}
+
+.left-image h2 {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.position-information {
+    grid-area: body;
+    background-color: #E2E2E2;
+}
+
+.position-container:nth-child(odd) .position-information{
+    margin: 20px 10px 20px 0px;
+    border-right: 5px solid #a32638;
+}
+
+.position-container:nth-child(even) .position-information{
+    margin: 20px 0px 20px 10px;
+    border-left: 5px solid #a32638;
+}
+
+.position-container .position-information {
+    padding: 10px;
+}
+
+#contact-container {
+    padding: 20px 0px;
+    margin:auto;
+    width: 80%;
+    font-family: Lato,sans-serif;
+    font-size: 1em;
+}
+
+#contact-container table caption {
+    color: #a32638;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+#contact-container table {
+    margin: auto;
+}
+
+#contact-container table tr:nth-child(odd) {
+    background-color:#E2E2E2;
+}
+
+#contact-container table tr td {
+    padding: 2px 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+.position-container {
+    display:block;
+}
+
+
+.position-container:nth-child(even) {
+    text-align:left;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "image body";
+}
+
+.position-container:nth-child(odd) {
+    text-align:left;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "body image";
+}
+
+.position-container .position-information {
+    border-right: 0px !important;
+    border-left: 5px solid #a32638 !important;
+}
+
+.position-image {
+    margin:auto;
+    max-width: 630px;
+}
+}   
+    
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <meta name="description" content="The Stevens Athletic Department offers a number of positions each academic semester to allow students to use their Federal Work Study aid.">
@@ -51,15 +302,15 @@
     </div>
 
     <div class="center-text" style="padding:20px 0px">
-        <a id="learnmore" href="https://www.stevens.edu/admissions/tuition-financial-aid/undergraduate-scholarships-aid/federal-programs/work-study" target="_blank"><button class="button" >Learn More</button></a>
-        <a id="applynow" href="https://stevens.wd5.myworkdayjobs.com/en-US/External/job/Hoboken-NJ---Main-Campus/FWS-Athletics-Event-Staff_RQ21677" target="_blank"><button class="button" >Apply Now</button></a>
+        <a id="learnmore" class="button" href="https://www.stevens.edu/admissions/tuition-financial-aid/undergraduate-scholarships-aid/federal-programs/work-study" target="_blank">Learn More</a>
+        <a id="applynow" class="button" href="https://stevens.wd5.myworkdayjobs.com/en-US/External/job/Hoboken-NJ---Main-Campus/FWS-Athletics-Event-Staff_RQ21677" target="_blank">Apply Now</a>
     </div>
 
     <div class="header-container"><h2>Available Positions:</h2></div>
 
     <div class="position-container">
         <div class="left-image"><h2>Webcast Producer</h2></div>
-        <div class="position-image" style="background:url('webcast.jpg'); background-position: center;"></div>
+        <div class="position-image" style="background:url('studentworkers_webcast.jpg'); background-position: center;"></div>
             <div class="position-header"></div>
             <div class="position-information">
                 <p>All games run by the Stevens Athletics staff are live streamed to the public watching at home. In order to do this, a webcast producer is needed at each game in order to update the score, and create highlights for the game in real-time. </p>
@@ -68,7 +319,7 @@
 
     <div class="position-container">
         <div class="left-image"><h2>Camera Operator</h2></div>
-        <div class="position-image" style="background:url('camera.jpg'); background-position: center;"></div>
+        <div class="position-image" style="background:url('studentworkers_camera.jpg'); background-position: center;"></div>
             <div class="position-header"></div>
             <div class="position-information">
                 <p>All games run by the Stevens Athletics staff are live streamed to the public watching at home. In order to do this, a camera operator is needed at each game in order to follow the action within a game and highlight the most important sections of the field or court.</p>
@@ -77,7 +328,7 @@
 
     <div class="position-container">
         <div class="left-image"><h2>General Event Staff</h2></div>
-        <div class="position-image" style="background:url('generalworker.jpg'); background-position: center;"></div>
+        <div class="position-image" style="background:url('studentworkers_generalworker.jpg'); background-position: center;"></div>
             <div class="position-header"></div>
             <div class="position-information">
                 <p>General Event Staff is needed to setup events before they begin and to fill in necessary roles during the game. Depending on what sports and the amount of staffing on each day will determine where you are placed to work.</p>
@@ -86,7 +337,7 @@
 
     <div class="position-container">
         <div class="left-image"><h2>Field Staff</h2></div>
-        <div class="position-image" style="background:url('test-image.jpg'); background-position: center;"></div>
+        <div class="position-image" style="background:url('studentworkers_fieldstaff.jpg'); background-position: center;"></div>
             <div class="position-header"></div>
             <div class="position-information">
                 <p>Multiple positions need to be filled on the field to keep play running smoothly and effectively. Field Staff continue to work throughout the game, assisting from the sideline, operating the clock, and/or ball running for the teams.</p>
@@ -95,7 +346,7 @@
 
     <div class="position-container">
         <div class="left-image"><h2>Gate Collection</h2></div>
-        <div class="position-image" style="background:url('gatecollection.jpg'); background-position: center;"></div>
+        <div class="position-image" style="background:url('studentworkers_gatecollection.jpg'); background-position: center;"></div>
             <div class="position-header"></div>
             <div class="position-information">
                 <p>Gate collection assist patrons entering and leaving the event. They direct patrons to restrooms, greet people, and sometimes distribute programs. They also sell and inspect tickets.</p>
@@ -104,7 +355,7 @@
     
     <div class="position-container">
         <div class="left-image"><h2>Music Operator</h2></div>
-        <div class="position-image" style="background:url('musicoperator.jpg'); background-position: center;"></div>
+        <div class="position-image" style="background:url('studentworkers_musicoperator.jpg'); background-position: center;"></div>
             <div class="position-header"></div>
             <div class="position-information">
                 <p>A music operator performs all the music and sound prompts that occur during the games. Furthermore, it is the music operators job to play the national anthem before the start of each game and play the correct entrance music for Stevens roster introductions.</p>
@@ -113,7 +364,7 @@
 
     <div class="position-container">
         <div class="left-image"><h2>Statisticians</h2></div>
-        <div class="position-image" style="background:url('statisticians.jpg'); background-position: center;"></div>
+        <div class="position-image" style="background:url('studentworkers_statisticians.jpg'); background-position: center;"></div>
             <div class="position-header"></div>
             <div class="position-information">
                 <p>The Stevens Athletic Department offers a number of positions each academic semester allowing students to get involved with the Athletics around campus. Specific sports knowledge is optional but an interest is recommended for the positions.</p>
